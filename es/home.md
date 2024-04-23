@@ -1,7 +1,7 @@
 ---
 lang-ref: home
 layout: home
-title: PaleoSphere
+title: Spanish PaleoSphere
 description: Unlocking Earth's Ancient Past - Free Access to Paleo Data for Researchers and Enthusiasts Alike.
 background:  "https://api.gbif.org/v1/image/cache/occurrence/1934869005/media/5e087bf39dbae4b5b52d93834114392d" #"{{ site.data.images.acalypha_gillespieae.src }}"
 imageLicense: "{{ site.data.images.acalypha_gillespieae.caption }}"
@@ -23,7 +23,7 @@ composition:
     data: examples.herbariumImageExample
   - type: features
     data: examples.couldBeAnyName
-permalink: /
+permalink: /es/
 ---
 
 Edit `/home.md` to change the text.
