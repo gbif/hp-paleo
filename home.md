@@ -3,8 +3,9 @@ lang-ref: home
 layout: home
 title: PaleoSphere
 description: Unlocking Earth's Ancient Past - Free Access to Paleo Data for Researchers and Enthusiasts Alike.
-background:  "https://api.gbif.org/v1/image/cache/occurrence/1934869005/media/5e087bf39dbae4b5b52d93834114392d" #"{{ site.data.images.acalypha_gillespieae.src }}"
-imageLicense: "{{ site.data.images.acalypha_gillespieae.caption }}"
+background:  "/assets/images/placeholders/trilobite.jpg" #"{{ site.data.images.acalypha_gillespieae.src }}"
+imageLicense: |
+  Photo by <a href="https://unsplash.com/@wcwarren?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wes Warren</a> on <a href="https://unsplash.com/photos/gray-and-black-fish-on-water-f0vDEW7VoHY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 height: 90vh
 klass: home
 navbar:
