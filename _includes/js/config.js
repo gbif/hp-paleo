@@ -70,6 +70,7 @@ var siteConfig = {
       contentType: ['PALEONTOLOGICAL_OTHER', 'PALEONTOLOGICAL_CONODONTS', 'PALEONTOLOGICAL_INVERTEBRATE_FOSSILS', 'PALEONTOLOGICAL_INVERTEBRATE_MICROFOSSILS', 'PALEONTOLOGICAL_PETRIFIED_WOOD', 'PALEONTOLOGICAL_PLANT_FOSSILS', 'PALEONTOLOGICAL_TRACE_FOSSILS']
     }
   },
+  // you should register your own keys with maptiler and mapbox please
   apiKeys: {
     maptiler: "wFxbBf3Tv2e75QQfYOOW",
     mapbox: "pk.eyJ1IjoiZ2JpZiIsImEiOiJja3VmZm50Z3kxcm1vMnBtdnBmeGd5cm9hIn0.M2z2n9QP9fRHZUCw9vbgOA"
@@ -78,15 +79,34 @@ var siteConfig = {
   maps: {
     // locale: 'ja',
     defaultProjection: 'MERCATOR',
-    defaultMapStyle: 'BRIGHT',
+    defaultMapStyle: 'GEOLOGY',
     mapStyles: {
       ARCTIC: ['NATURAL', 'BRIGHT'],
       PLATE_CAREE: ['NATURAL', 'BRIGHT', 'DARK'],
-      MERCATOR: ['NATURAL', 'BRIGHT', 'SATELLITE', 'DARK'],
+      MERCATOR: ['NATURAL', 'BRIGHT', 'SATELLITE', 'DARK', 'GEOLOGY'],
       ANTARCTIC: ['NATURAL', 'BRIGHT', 'DARK']
+    },
+    addMapStyles: function ({ mapStyleServer, language, pixelRatio, apiKeys, mapComponents }) {
+      return {
+        GEOLOGY: { // the name of your style
+          component: mapComponents.OpenlayersMap, // what map component to use OpenlayersMap | OpenlayersMapbox
+          labelKey: 'mapLayernames.geology', // the label in the select. Use a translation key
+          mapConfig: {
+            basemapStyle: '/assets/maps/macrostrat.json',
+            projection: 'EPSG_3857'// one of 4326 | 3031 | 3857 | 3575
+          }
+        }
+      }
+    },
+    // rewire style names to show a different style
+    styleLookup: {
+      MERCATOR: {
+        GEOLOGY: 'GEOLOGY'
+      }
     }
   },
   messages: {
-    "catalogues.occurrences": "Specimens"
+    "catalogues.occurrences": "Specimens",
+    "mapLayernames.geology": "Geology"
   }
 };
