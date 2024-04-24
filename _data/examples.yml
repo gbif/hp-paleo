@@ -60,7 +60,7 @@ herbariumImageExample:
   description: |      # required
     Forth beginning form dry thing. Form seed void likeness darkness light. Can't created third upon spirit fruitful hath likeness their. Replenish saw female night they're you blessed all greater cattle, grass god fifth you're. Above wherein replenish face multiply male every. Own hath lights under creeping.
   # img required
-  background: https://data.nhm.ac.uk/media/d9850154-9e45-426c-8712-d030da3c1c00
+  background: /assets/images/placeholders/blocks2.png
   imageLicense: |
     *Polyptychodon* Owen, 1841 collected in United Kingdom of Great Britain and Northern Ireland. [See full record](/specimen/search?entity=1057252794&view=TABLE) (licensed under http://creativecommons.org/licenses/by/4.0/)
   href: /about
